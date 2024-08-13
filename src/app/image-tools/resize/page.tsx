@@ -72,7 +72,7 @@ export default function ResizeImage() {
   };
 
   return (
-    <div className="h-[100vh] w-[80%] text-center">
+    <div className="h-[100vh] w-full text-center">
       <h1 className="font-bold  w-fit mx-auto my-5 uppercase text-[28px]">
         Resize Image
       </h1>

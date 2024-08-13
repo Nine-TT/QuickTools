@@ -27,9 +27,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex">
-            <SideBar playlists={playlists} className="w-[20%]" />
-            {children}
+          <div className="flex h-[100vh] ">
+            <div className="w-[20%]">
+              <SideBar playlists={playlists} />
+            </div>
+            <div className="w-[80%]">{children}</div>
           </div>
           <div className="fixed bottom-4 right-4">
             <ModeToggle />
