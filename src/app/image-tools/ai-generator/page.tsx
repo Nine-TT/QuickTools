@@ -1,13 +1,9 @@
 "use client";
 
-import { generateImageFromText } from "@/apis/openai";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import React, { useState } from "react";
 
 export default function () {
-  const [text, setText] = useState("");
-
   return (
     <div className="w-full h-full text-center">
       <h1>AI generator </h1>
@@ -15,9 +11,6 @@ export default function () {
         <Textarea
           placeholder="Type your message here."
           className="w-[500px] h-[100px]"
-          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
-            setText(e.target.value);
-          }}
         />
         <Button className="ml-5">Generate</Button>
       </div>
