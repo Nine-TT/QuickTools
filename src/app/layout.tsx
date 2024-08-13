@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
+import { SideBar } from "@/components/side-bar";
+import { playlists } from "@/data/menuLists";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="flex">
+            <SideBar playlists={playlists} className="w-[20%]" />
+            {children}
+          </div>
           <div className="fixed bottom-4 right-4">
             <ModeToggle />
           </div>
