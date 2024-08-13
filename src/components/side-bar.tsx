@@ -33,10 +33,12 @@ export function SideBar({ className }: any) {
                   Resize image
                 </Button>
               </Link>
-              <Button variant="ghost" className="w-full justify-start">
-                <TransparencyGridIcon className="mr-2 h-4 w-4" />
-                Remove background
-              </Button>
+              <Link href={"/image-tools/remove-bg"}>
+                <Button variant="ghost" className="w-full justify-start">
+                  <TransparencyGridIcon className="mr-2 h-4 w-4" />
+                  Remove background
+                </Button>
+              </Link>
               <Button variant="ghost" className="w-full justify-start">
                 <CubeIcon className="mr-2 h-4 w-4" />
                 AI Image Generator
