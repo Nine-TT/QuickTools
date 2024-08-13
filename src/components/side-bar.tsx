@@ -14,7 +14,7 @@ export function SideBar({ className }: any) {
   return (
     <ScrollArea className="h-full w-full">
       <div className={cn("pb-12 ", className)}>
-        <div className="space-y-4 py-4 border-r-2 h-[100vh] border-gray-400 ">
+        <div className="space-y-4 py-4 border-r-2 h-[100vh] md:border-gray-400 ">
           <div>
             <Link href={"/"}>
               <h2 className="mb-2 px-4 leading-10 text-lg font-semibold bg-[#46A758] rounded-lg tracking-widest w-[91%] mx-auto">
@@ -24,7 +24,7 @@ export function SideBar({ className }: any) {
           </div>
           <div className="px-3 py-2">
             <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
-              Image tools
+              Image
             </h2>
             <div className="space-y-1">
               <Link href="/image-tools/resize">
@@ -39,15 +39,17 @@ export function SideBar({ className }: any) {
                   Remove background
                 </Button>
               </Link>
-              <Button variant="ghost" className="w-full justify-start">
-                <CubeIcon className="mr-2 h-4 w-4" />
-                AI Image Generator
-              </Button>
+              <Link href={"/image-tools/ai-generator"}>
+                <Button variant="ghost" className="w-full justify-start">
+                  <CubeIcon className="mr-2 h-4 w-4" />
+                  AI image generator
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="px-3 py-2">
             <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
-              Library
+              Text
             </h2>
             <div className="space-y-1">
               <Button variant="ghost" className="w-full justify-start">
@@ -67,7 +69,7 @@ export function SideBar({ className }: any) {
                   <path d="M16 6H3" />
                   <path d="M12 18H3" />
                 </svg>
-                Playlists
+                Text to speech
               </Button>
               <Button variant="ghost" className="w-full justify-start">
                 <svg
@@ -83,7 +85,7 @@ export function SideBar({ className }: any) {
                   <circle cx="8" cy="18" r="4" />
                   <path d="M12 18V2l7 4" />
                 </svg>
-                Songs
+                Speech to text
               </Button>
               <Button variant="ghost" className="w-full justify-start">
                 <svg

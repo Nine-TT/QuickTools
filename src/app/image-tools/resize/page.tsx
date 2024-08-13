@@ -88,7 +88,7 @@ export default function ResizeImage() {
           value={width}
           onChange={(e) => setWidth(e.target.value)}
           placeholder="Width"
-          className="w-[100px]"
+          className="w-[100px] text-base"
         />
         <span className="mx-4">X</span>
         <Input
@@ -96,7 +96,7 @@ export default function ResizeImage() {
           value={height}
           onChange={(e) => setHeight(e.target.value)}
           placeholder="Height"
-          className="w-[100px]"
+          className="w-[100px] text-base"
         />
       </div>
 
@@ -106,7 +106,7 @@ export default function ResizeImage() {
 
       <canvas
         ref={canvasRef}
-        className="w-[500px] h-[300px] border border-blue-400 mx-auto my-5"
+        className="md:w-[500px] w-[90%] h-[300px] border border-blue-400 mx-auto my-5 "
       ></canvas>
 
       <a
