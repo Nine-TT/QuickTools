@@ -8,10 +8,6 @@ import React, { useState } from "react";
 export default function () {
   const [text, setText] = useState("");
 
-  const handleGenerateImage = async () => {
-    let data = await generateImageFromText(text);
-  };
-
   return (
     <div className="w-full h-full text-center">
       <h1>AI generator </h1>
@@ -23,13 +19,9 @@ export default function () {
             setText(e.target.value);
           }}
         />
-        <Button className="ml-5" onClick={handleGenerateImage}>
-          Generate
-        </Button>
+        <Button className="ml-5">Generate</Button>
       </div>
       <div className="w-[900px] h-[500px] border border-blue-400 mx-auto"></div>
-      <iframe id="your-iframe-id" src="about:empty"></iframe>
-      <input type="file" id="your-file-input-id" />
     </div>
   );
 }
