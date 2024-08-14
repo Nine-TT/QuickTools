@@ -45,6 +45,12 @@ export function SideBar({ className }: any) {
                   AI image generator
                 </Button>
               </Link>
+              <Link href={"/image-tools/image"}>
+                <Button variant="ghost" className="w-full justify-start">
+                  <CubeIcon className="mr-2 h-4 w-4" />
+                  Imagefree
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="px-3 py-2">

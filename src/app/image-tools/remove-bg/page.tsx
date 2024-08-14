@@ -47,7 +47,7 @@ export default function RemoveBG() {
         Remove Background
       </Button>
       {error && <p className="text-red-500 mt-3">{error}</p>}
-      <div className="mt-5 border border-blue-400 w-[500px] h-[300px] mx-auto flex items-center justify-center bg-gray-100">
+      <div className="mt-5 border border-blue-400 md:w-[500px] w-[90%] h-[300px] mx-auto flex items-center justify-center bg-gray-100">
         {loading && (
           <div className="w-full h-full flex items-center justify-center">
             <div className="border border-gray-300 rounded-lg p-4 bg-white">
