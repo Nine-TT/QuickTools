@@ -46,7 +46,6 @@ export default function ImageFree() {
       setIsLoading(true);
       try {
         const data: PexelsResponse = await getAllImage(page);
-        console.log("Fetched data for page:", page, data.photos);
 
         if (data.photos.length === 0) {
           setHasMore(false); // Không còn ảnh để tải thêm
@@ -54,7 +53,6 @@ export default function ImageFree() {
           setImages((prevImages) => [...prevImages, ...data.photos]);
         }
       } catch (error) {
-        console.error("Error fetching images:", error);
       } finally {
         setIsLoading(false);
       }
@@ -69,7 +67,6 @@ export default function ImageFree() {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && hasMore) {
-          console.log("Loading more, current page:", page);
           setPage((prevPage) => prevPage + 1);
         }
       },
